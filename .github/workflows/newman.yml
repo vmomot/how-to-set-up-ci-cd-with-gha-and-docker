@@ -19,7 +19,7 @@ jobs:
         uses: matt-ball/newman-action@v1.0.4
         with:
           collection: postman/example_collection.json
-          delayRequest: 200
+          delayRequest: 250
       - name: Notify that tests is success
         run: echo 'Tests success!'
         if: success()
