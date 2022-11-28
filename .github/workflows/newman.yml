@@ -1,0 +1,28 @@
+name: Newman tests
+
+
+on:
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+
+jobs:
+  integration-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Run Postman integration tests with Newman
+        id: test
+        uses: matt-ball/newman-action@v1.0.4
+        with:
+          collection: postman/example_collection.json
+          delayRequest: 200
+      - name: Notify that tests is success
+        run: echo 'Tests success!'
+        if: success()
+      - name: Notify that tests is failed
+        run: echo 'Tests failed!'
+        if: failure()
