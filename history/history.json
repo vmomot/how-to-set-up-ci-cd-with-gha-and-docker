@@ -1,0 +1,1 @@
+{"13b16e0eebb1caf4be77127132a05163":{"statistic":{"failed":0,"broken":0,"skipped":0,"passed":1,"unknown":0,"total":1},"items":[{"uid":"8217153e599d41df","reportUrl":"https://vmomot.github.io/how-to-set-up-ci-cd-with-gha-and-docker/2//#testresult/8217153e599d41df","status":"passed","time":{"start":1669642888391,"stop":1669642889052,"duration":661}}]}}
